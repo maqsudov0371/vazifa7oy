@@ -279,126 +279,29 @@
                     <div class="tab-content">
                         <div id="All" class="tab-pane active" role="tabpanel">
                             <div class="row">
+                                {% for course in courses %}
                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                     <div class="edu_slide_tab_box float_left">
                                         <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc1.jpg" alt="img">
+                                            <img src="{{ course.image.url }}" alt="img">
                                             <div class="edu_tabs_label">
                                                 <p><del>$90</del>
                                                 </p>
                                                 <div class="edu_tabs_label_inner">
-                                                    <p>$65</p>
+                                                    <p>{{ course.price }}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="edu_slide_tabs_img_cont_box float_left">
-                                            <h4>Start Date : <span>Aug 28, 2019</span></h4>
-                                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula velit lectus, non ornare nibh consectetur accumsan.</p>
+                                            <h4>Start Date : <span>{{ course.create_at|date:"d-b Y" }}</span></h4>
+                                            <h3><a href="#">{{ course.title }}</a></h3>
+                                            <p>{{ course.description|truncatewords:8 }}</p>
                                             <h5><a href="#">Join Now</a></h5>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="edu_slide_tab_box float_left">
-                                        <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc2.jpg" alt="img">
-                                            <div class="edu_tabs_label">
-                                                <p><del>$90</del>
-                                                </p>
-                                                <div class="edu_tabs_label_inner">
-                                                    <p>$65</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="edu_slide_tabs_img_cont_box float_left">
-                                            <h4>Start Date : <span>Aug 28, 2019</span></h4>
-                                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula velit lectus, non ornare nibh consectetur accumsan.</p>
-                                            <h5><a href="#">Join Now</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="edu_slide_tab_box float_left">
-                                        <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc3.jpg" alt="img">
-                                            <div class="edu_tabs_label">
-                                                <p><del>$90</del>
-                                                </p>
-                                                <div class="edu_tabs_label_inner">
-                                                    <p>$65</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="edu_slide_tabs_img_cont_box float_left">
-                                            <h4>Start Date : <span>Aug 28, 2019</span></h4>
-                                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula velit lectus, non ornare nibh consectetur accumsan.</p>
-                                            <h5><a href="#">Join Now</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="edu_slide_tab_box edu_slide_tab_box2 float_left">
-                                        <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc4.jpg" alt="img">
-                                            <div class="edu_tabs_label">
-                                                <p><del>$90</del>
-                                                </p>
-                                                <div class="edu_tabs_label_inner">
-                                                    <p>$65</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="edu_slide_tabs_img_cont_box float_left">
-                                            <h4>Start Date : <span>Aug 28, 2019</span></h4>
-                                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula velit lectus, non ornare nibh consectetur accumsan.</p>
-                                            <h5><a href="#">Join Now</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="edu_slide_tab_box edu_slide_tab_box2 float_left">
-                                        <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc5.jpg" alt="img">
-                                            <div class="edu_tabs_label">
-                                                <p><del>$90</del>
-                                                </p>
-                                                <div class="edu_tabs_label_inner">
-                                                    <p>$65</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="edu_slide_tabs_img_cont_box float_left">
-                                            <h4>Start Date : <span>Aug 28, 2019</span></h4>
-                                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula velit lectus, non ornare nibh consectetur accumsan.</p>
-                                            <h5><a href="#">Join Now</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                    <div class="edu_slide_tab_box edu_slide_tab_box2 float_left">
-                                        <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc6.jpg" alt="img">
-                                            <div class="edu_tabs_label">
-                                                <p><del>$90</del>
-                                                </p>
-                                                <div class="edu_tabs_label_inner">
-                                                    <p>$65</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="edu_slide_tabs_img_cont_box float_left">
-                                            <h4>Start Date : <span>Aug 28, 2019</span></h4>
-                                            <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula velit lectus, non ornare nibh consectetur accumsan.</p>
-                                            <h5><a href="#">Join Now</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
+
                             </div>
                         </div>
                         <div id="html" class="tab-pane fade" role="tabpanel">
@@ -406,7 +309,7 @@
                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                     <div class="edu_slide_tab_box float_left">
                                         <div class="edu_slide_tabs_img_box float_left">
-                                            <img src="/static/images/pc1.jpg" alt="img">
+                                            <img src="{{ course.image.url }}" alt="img">
                                             <div class="edu_tabs_label">
                                                 <p><del>$90</del>
                                                 </p>
